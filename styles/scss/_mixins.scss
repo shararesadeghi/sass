@@ -22,3 +22,19 @@
         }
     }
 }
+
+@mixin bodyStyle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $secondaryColor;
+    padding: 1rem;
+    height: 600px;
+    
+}
+
+@mixin boxStyle {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}

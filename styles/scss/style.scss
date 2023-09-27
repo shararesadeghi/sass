@@ -65,11 +65,80 @@ body{
     }
 }
 
+.main{
+    display: flex;
+    margin: 2rem 3rem;
+
+    aside{
+        flex-direction: column;
+        width: 25%;
+        margin-right: 25px;
+        @include bodyStyle;
+        @include boxStyle;
+
+        div{
+            background: $primaryColor;
+            width: 100%;
+            text-align: center;
+            line-height: 110px;
+            height: 110px;
+            margin: 20px 10px;
+            @include textStyle(1rem, bold, $secondaryColor);
+            @include boxStyle;
+        }
+
+    }
+    main{
+        flex-direction: column;
+        width: 75%;
+        @include bodyStyle;
+        @include boxStyle;
+
+        img{
+            width: 200px;
+            @include boxStyle;
+        }
+
+        h2{
+            margin: 2rem 0 3rem;
+            @include textStyle(4rem, bold, $primaryColor);
+        }
+
+        p{
+            @include textStyle(2rem, bold, $textColor);
+        }
+    }
+}
+
 @include media(M){
     .hamburger-menu{
         display: flex;
     }
     .navbar{
         display: none;
+    }
+
+    .main{
+        flex-direction: column-reverse;
+        margin: 1rem;
+
+        main{
+            width: calc(100% - 2rem);
+            height: 500px;
+            margin-bottom: 20px;
+
+            h2{
+                font-size: 3rem;
+            }
+
+            p{
+                font-size: 1rem;
+            }
+        }
+
+        aside{
+            width: calc(100% - 2rem);
+            height: 600px;
+        }
     }
 }
