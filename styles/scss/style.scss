@@ -110,6 +110,41 @@ body{
     }
 }
 
+.cards{
+    width: calc(100% - 6rem);
+    margin: 0 auto;
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    gap: 30px;
+}
+
+.card{
+    @include bodyStyle;
+
+    img{
+        width: 100%;
+    }
+
+    .card-content{
+        line-height: 1.5rem;
+        padding: 15px;
+        background: $secondaryColor;
+
+        p{
+           margin: 10px 0; 
+           @include textStyle(1.1rem, 100, $textColor);
+        }
+
+        span{
+            display: inline-block;
+            margin: 10px 0;
+            @include textStyle(0.9rem, bold, $primaryColor);
+        }
+    }
+}
+
 @include media(M){
     .hamburger-menu{
         display: flex;
