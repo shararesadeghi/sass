@@ -176,4 +176,15 @@ body{
             height: 600px;
         }
     }
+
+    .cards{
+        grid-template-columns: 1fr;
+    }
+}
+
+@include media(L){
+    .cards{
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
 }
