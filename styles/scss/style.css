@@ -177,6 +177,94 @@ body {
   color: #009FDE;
 }
 
+.cards {
+  width: calc(100% - 6rem);
+  margin: 0 auto;
+  padding: 20px 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  gap: 30px;
+}
+
+.card {
+  -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card .card-content {
+  line-height: 1.5rem;
+  padding: 15px;
+  background: #fff;
+}
+
+.card .card-content p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  font-weight: 100;
+  color: #009FDE;
+}
+
+.card .card-content span {
+  display: inline-block;
+  margin: 10px 0;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #1B2A41;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2rem 3rem;
+  background: #1B2A41;
+  margin-top: 30px;
+}
+
+footer .summary {
+  width: 50%;
+}
+
+footer .summary p {
+  text-align: justify;
+  font-size: 1.2rem;
+  font-weight: 100;
+  color: #fff;
+}
+
+footer .links {
+  padding: 0 5rem;
+}
+
+footer .links ul {
+  list-style: none;
+}
+
+footer .links a {
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 10px;
+  -webkit-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
+  font-size: 1.2rem;
+  font-weight: bild;
+  color: #fff;
+}
+
+footer .links a:hover {
+  color: #009FDE;
+}
+
 @media (max-width: 768px) {
   .hamburger-menu {
     display: -webkit-box;
@@ -207,6 +295,32 @@ body {
   .main aside {
     width: calc(100% - 2rem);
     height: 600px;
+  }
+  .cards {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .summary {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  footer .links {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .cards {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 50px;
   }
 }
 /*# sourceMappingURL=style.css.map */

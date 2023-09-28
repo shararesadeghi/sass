@@ -121,7 +121,7 @@ body{
 }
 
 .card{
-    @include bodyStyle;
+    @include boxStyle;
 
     img{
         width: 100%;
@@ -141,6 +141,42 @@ body{
             display: inline-block;
             margin: 10px 0;
             @include textStyle(0.9rem, bold, $primaryColor);
+        }
+    }
+}
+
+footer{
+    display: flex;
+    padding: 2rem 3rem;
+    background: $primaryColor;
+    margin-top: 30px;
+
+    .summary{
+        width: 50%;
+
+        p{
+            text-align: justify;
+            @include textStyle(1.2rem, 100, $secondaryColor);
+        }
+    }
+
+    .links{
+        padding: 0 5rem;
+
+        ul{
+            list-style: none;
+        }
+
+        a{
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 10px;
+            transition: all 0.15s ease-in;
+            @include textStyle(1.2rem, bild, $secondaryColor);
+
+            &:hover{
+                color: $textColor;
+            }
         }
     }
 }
@@ -179,6 +215,20 @@ body{
 
     .cards{
         grid-template-columns: 1fr;
+    }
+
+    footer{
+        flex-direction: column;
+
+        .summary{
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        
+        .links{
+            width: 100%;
+            padding: 0;
+        }
     }
 }
 
